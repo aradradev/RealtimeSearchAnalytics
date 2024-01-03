@@ -1,5 +1,5 @@
 class UserSearch < ApplicationRecord
-    validates :query, presence: true, uniqueness: true
+  validates :query, presence: true, uniqueness: true
 
-    scope :unique_queries, -> { select(:query).distinct}
+  scope :unique_queries, -> { select(:query).distinct }
 end
